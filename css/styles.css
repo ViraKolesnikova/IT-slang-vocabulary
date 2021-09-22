@@ -190,3 +190,19 @@ header {
 .word-definition {
   font-size: 20px;
 }
+
+.word-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.word-list-item {
+  margin-bottom: 8px;
+}
+
+.word-list-link {
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--placeholder-color);
+}
