@@ -10,12 +10,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/wrapper.css">
 </head>
 <body>
   <header>
     <div class="container header-content">
       <img src="./images/tree-64x64.png" alt="лого" width="64"> 
-      <p>Розважально-пізнавальна сторінка для всіх, хто цікавиться світом ІТ</p>     
+      <p class="header-text">Розважально-пізнавальна сторінка<br> для всіх, хто цікавиться світом ІТ</p>     
+      <nav class="navigation">
+        <li class="navigation-item"><a href="#alphabet" class="link nav-link">Алфавітний пошук</a></li>
+        <li class="navigation-item"><a href="#jokes" class="link nav-link">Анекдоти</a></li>
+        <li class="navigation-item"><a href="#test" class="link nav-link">Тест</a></li>
+        <li class="navigation-item"><a href="#contacts" class="link nav-link">Контакти</a></li>
+        <li>          
+          <div class="toggle_switch">
+            <input type="checkbox" class="switch_3">
+            <svg class="checkbox" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 168 80">
+              <path class="outer-ring"
+                d="M41.534 9h88.932c17.51 0 31.724 13.658 31.724 30.482 0 16.823-14.215 30.48-31.724 30.48H41.534c-17.51 0-31.724-13.657-31.724-30.48C9.81 22.658 24.025 9 41.534 9z"
+                fill="none" stroke="#233043" stroke-width="3" stroke-linecap="square" stroke-miterlimit="3" />
+              <path class="is_checked"
+                d="M17 39.482c0-12.694 10.306-23 23-23s23 10.306 23 23-10.306 23-23 23-23-10.306-23-23z" />
+              <path class="is_unchecked"
+                d="M132.77 22.348c7.705 10.695 5.286 25.617-5.417 33.327-2.567 1.85-5.38 3.116-8.288 3.812 7.977 5.03 18.54 5.024 26.668-.83 10.695-7.706 13.122-22.634 5.418-33.33-5.855-8.127-15.88-11.474-25.04-9.23 2.538 1.582 4.806 3.676 6.66 6.25z" />
+            </svg>
+          </div>           
+        </li>
+      </nav>
     </div>
   </header>
   <main>
@@ -27,7 +48,7 @@
           <button class="search-button" type="submit">Знайти</button>
         </form>
       </section>
-      <div class="alphabet">
+      <div class="alphabet" id="alphabet">
         <ul class="alphabet-list">
           <li class="alphabet-item">
             <button type="button" class="alphabet-btn">А</button>
@@ -131,21 +152,30 @@
           <ul class="word-list"></ul>
         </div>
      </div>
-     <div class="gallery">
-       <ul>
-         <li class="gallery-item"><img src="" alt="" class="gallery-img"></li>
-         <li class="gallery-item"><img src="" alt="" class="gallery-img"></li>
-         <li class="gallery-item"><img src="" alt="" class="gallery-img"></li>
-         <li class="gallery-item"><img src="" alt="" class="gallery-img"></li>
-         <li class="gallery-item"><img src="" alt="" class="gallery-img"></li>
-         <li class="gallery-item"><img src="" alt="" class="gallery-img"></li>
-       </ul>
+     <div class="jokes" id="jokes">
+       <h2 class="jokes-title">Анекдоти</h2>
+       <p class="jokes-text">Якщо ти посміхаєшся, переглядаючи ці картинки - ти точно <span class="jokes-text--accent">програміст</span> або пов’язаний зі сферою ІТ!</p>
+       <ul class="jokes-list">
+         <li class="jokes-item"><img src="./images/programist-adresa-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
+         <li class="jokes-item"><img src="./images/avto-ctrl-z-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
+         <li class="jokes-item"><img src="./images/programist-kofejin-kod-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
+         <li class="jokes-item"><img src="./images/zlamaty-parol-1234-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
+         <li class="jokes-item"><img src="./images/reabilitatsija-programistiv-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
+         <li class="jokes-item"><img src="./images/8-trembit-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
+        </ul>
      </div>
+    <div class="test" id="test">
+      <h2 class="test-title"><span class="test-title--accent">тест:</span><br>наскільки добре ти розумієш сленг айтішніків?</h2>
+      <button type="button" class="test-button">Почати тест</button>
+      
+    </div>
     </div>
   </main>
-  <footer class="container">
-    <h3>Контакти розробника сторінки</h3>
-    <p></p>
+  <footer>
+    <div class="container">
+      <h3>Контакти розробника сторінки</h3>
+      <p></p>
+    </div>
   </footer>
 
   <script src="./index.js" type="module"></script>
