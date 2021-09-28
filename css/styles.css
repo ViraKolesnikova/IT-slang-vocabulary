@@ -1,3 +1,4 @@
+/* =======Variables=========== */
 :root {
   --primery-text-color: #230d25;
   --title-color: #571764;
@@ -15,7 +16,7 @@ body {
   font-family: 'Arimo', sans-serif;
 }
 
-/*Утиліти*/
+/*=========UTILITS=============*/
 ul,
 nav,
 p {
@@ -51,6 +52,7 @@ img {
   margin-right: auto;
 }
 
+/* ============HEADER============= */
 header {
   position: fixed;
   width: 100%;
@@ -90,7 +92,9 @@ header {
   color: var(--accent);
   text-decoration-line: underline;
 }
+/* ============================ */
 
+/* =========HERO =============*/
 .hero {
   padding: 100px 0px;
   margin-bottom: 34px;
@@ -145,7 +149,9 @@ header {
 }
 
 .search-button,
-.test-button {
+.test-button,
+.next-btn,
+.result-btn {
   display: flex;
   align-items: center;
   padding: 10px 28px;
@@ -166,11 +172,17 @@ header {
 .search-button:hover,
 .search-button:focus,
 .test-button:hover,
-.test-button:focus {
+.test-button:focus,
+.next-btn:hover,
+.next-btn:focus,
+.result-btn:hover,
+.result-btn:focus {
   background-color: var(--action-btn-color);
   transform: scale(1.2);
 }
+/* =========================== */
 
+/*========= SEARCH BY LETTER ============*/
 .alphabet-list {
   display: flex;
   justify-content: space-between;
@@ -245,7 +257,9 @@ header {
   font-size: 20px;
   color: var(--placeholder-color);
 }
+/* =========================== */
 
+/*============JOKES======== */
 .jokes {
   margin-bottom: 64px;
 }
@@ -284,6 +298,8 @@ header {
   margin-bottom: 20px;
   flex-basis: calc(100% - 40px) / 2;
 }
+
+/* ========================== */
 
 .test {
   padding: 100px 20px;
@@ -327,6 +343,91 @@ header {
     color: #200707;
   }
 }
+
+/* ===========MODAL WINDOW========== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1);
+  background-color: var(--backdrop-color);
+  transition: opacity 250ms linear, visibility 250ms linear,
+    transform 250ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 46px;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  color: var(--primery-text-color);
+  border: 1px solid var(--header-bg-color);
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url(../images/window_close_icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--header-bg-color);
+}
+
+/*======Cлайдер для тестів===========*/
+.quiz {
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.current-question {
+  opacity: 1;
+}
+
+.next-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 26%;
+}
+
+.result-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 26%;
+}
+
+/* ====================== */
 
 footer {
   width: 100%;

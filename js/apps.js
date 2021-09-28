@@ -1,5 +1,7 @@
 import data from './data.js';
 import refs from './refs.js';
+import tests from './tests.js';
+// console.log(tests);
 // console.log(data);
 // console.log(refs);
 
@@ -104,7 +106,7 @@ function createSortedByAlphabetListItems(arr) {
 // ====================
 function changeMainPositionToHeader() {
   mainRef.style.paddingTop = headerRef.offsetHeight + 'px';
-  console.log(mainRef.style.marginTop);
+  // console.log(mainRef.style.marginTop);
 }
 
 // TOGGLE SWITCH
