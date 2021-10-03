@@ -14,5 +14,6 @@ export default
   backdropRef: document.querySelector('.backdrop'),
   modalCloseBtnRef: document.querySelector('.modal-close-btn'),
   quizRef: document.querySelector('.quiz'),
-   
+  
+  nextBtnRef: document.querySelector('.next-btn') 
 }

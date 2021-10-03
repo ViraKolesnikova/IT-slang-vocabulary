@@ -408,11 +408,47 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  display: none;
+  font-size: 20px;
 }
 
 .current-question {
-  opacity: 1;
+  display: block;
+  color: var(--primery-text-color);
+}
+
+.quiz-number {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.question {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.answer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.answer input {
+  margin-right: 8px;
+}
+
+.answer:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.correctAnswer {
+  color: green;
+}
+
+.falseAnswer {
+  color: red;
 }
 
 .next-btn {
