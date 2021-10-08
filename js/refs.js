@@ -13,7 +13,7 @@ export default
   testBtnRef: document.querySelector('.test-button'),
   backdropRef: document.querySelector('.backdrop'),
   modalCloseBtnRef: document.querySelector('.modal-close-btn'),
-  quizRef: document.querySelector('.quiz'),
-  
-  nextBtnRef: document.querySelector('.next-btn') 
+  quizRef: document.querySelector('.quiz'),  
+  nextBtnRef: document.querySelector('.next-btn'),
+  resultBtnRef: document.querySelector('.result-btn')
 }

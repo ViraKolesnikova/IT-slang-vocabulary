@@ -8,6 +8,7 @@
   --action-btn-color: #ab5cf5;
   --header-bg-color: rgba(207, 204, 207, 1);
   --placeholder-color: #ffffffc2;
+  --disabled-color: rgb(86, 85, 88);
 }
 
 body {
@@ -180,6 +181,12 @@ header {
   background-color: var(--action-btn-color);
   transform: scale(1.2);
 }
+
+.disabled:disabled {
+  background-color: var(--disabled-color);
+  transition: none;
+  transform: none;
+}
 /* =========================== */
 
 /*========= SEARCH BY LETTER ============*/
@@ -241,6 +248,7 @@ header {
 
 .word-definition {
   font-size: 20px;
+  line-height: 1.4;
 }
 
 .word-list {
