@@ -15,5 +15,6 @@ export default
   modalCloseBtnRef: document.querySelector('.modal-close-btn'),
   quizRef: document.querySelector('.quiz'),  
   nextBtnRef: document.querySelector('.next-btn'),
-  resultBtnRef: document.querySelector('.result-btn')
+  resultBtnRef: document.querySelector('.result-btn'),
+  resultRef: document.querySelector('.result')
 }

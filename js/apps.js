@@ -23,7 +23,7 @@ function onInputSearch(event) {
   event.preventDefault();
   listRef.innerHTML = '';
   const result = data.find(object => {
-    return inputRef.value.toLowerCase() === object.term.toLowerCase();
+    return inputRef.value.toLowerCase().trim() === object.term.toLowerCase();
   })
  result === undefined ? isAbsentDefinition() : getSearchedDefinition(result);
 }
@@ -41,7 +41,7 @@ function getSearchedDefinition(obj) {
 }
 
 function isAbsentDefinition() {
-  termRef.textContent = inputRef.value;
+  termRef.textContent = inputRef.value.trim();
   definitionRef.textContent = 'Нажаль, в словнику не знайдено такого терміну...'; 
 }
 

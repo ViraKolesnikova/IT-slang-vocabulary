@@ -9,7 +9,8 @@ const {
   modalCloseBtnRef,
   quizRef,
   nextBtnRef,
-  resultBtnRef
+  resultBtnRef,
+  resultRef
 } = refs;
 // =======================
 
@@ -27,6 +28,7 @@ resultBtnRef.addEventListener('click', onResultBtnClick);
 testBtnRef.addEventListener('click', (event) => {
   backdropRef.classList.add('is-open');
   showFirstQuestion();
+  resultRef.innerHTML = '';
   
 });
 
@@ -74,14 +76,18 @@ function onInputRadioClick(event) {
       changeColorOfUserAnswer(chosenLabel, question);
       getQuizResult(question);
     }
-  })
-  console.log(quizResult);
+  })  
 }
 
 function onResultBtnClick(event) {
-  
+  const resultMarkup = `Вітаємо! Ви набрали ${quizResult} з ${slidersQuizRef.length} балів`;
+  removeLastQuestion();
+  resultRef.insertAdjacentHTML('afterbegin', resultMarkup);
+  event.target.setAttribute('disabled', true)
+  event.target.classList.add('disabled');
+  // resultRef.style.display = 'block'
 }
-// ==========================
+// ============Допоміжні функції==============
 
 function showFirstQuestion() {
   quizRef.firstChild.classList.add('current-question');
@@ -109,7 +115,9 @@ function getUserAnswer() {
 }
 
 function changeColorOfUserAnswer(elem, test) {
-  return userAnswer === test.correctAnswer ? elem.classList.add('correctAnswer') : elem.classList.add('falseAnswer');
+  return userAnswer === test.correctAnswer
+    ? elem.classList.add('correctAnswer')
+    : elem.classList.add('falseAnswer');
 }
 
 function findCurrentSliderIndex(array) {

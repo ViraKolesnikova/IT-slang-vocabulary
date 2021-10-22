@@ -47,18 +47,34 @@ img {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 30px;
+  padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 /* ============HEADER============= */
 header {
   position: fixed;
   width: 100%;
   z-index: 99;
-  height: 68px;
+  height: auto;
   border-bottom: solid 1px var(--accent);
   background-color: var(--header-bg-color);
 }
@@ -236,7 +252,7 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 44px;
-  margin-bottom: 44px;
+
   background-color: var(--primery-text-color);
   color: var(--white-color);
 }
@@ -270,6 +286,10 @@ header {
 /*============JOKES======== */
 .jokes {
   margin-bottom: 64px;
+  padding-top: 44px;
+  background-image: url(../images/snow-fone-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jokes-title {
@@ -471,12 +491,137 @@ header {
   right: 26%;
 }
 
+.result {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primery-text-color);
+}
+
 /* ====================== */
 
 footer {
   width: 100%;
-  padding-top: 34px;
-  padding-bottom: 34px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-bottom: solid 1px var(--placeholder-color);
   background-color: var(--header-bg-color);
+}
+
+.contact {
+  margin-top: 8px;
+}
+
+.contact-link {
+  color: var(--accent);
+}
+
+.contact-text {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .header-text {
+    display: none;
+  }
+
+  .details {
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .header-text {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/menu_hamburger_burger_icon_176431.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+  }
+
+  .header-content {
+    justify-content: space-between;
+  }
+
+  .hero {
+    margin-bottom: 16px;
+    padding: 30px 0;
+  }
+
+  .main-title {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  .main-title-accent {
+    font-size: 52px;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search-input {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    width: 360px;
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .jokes {
+    margin-bottom: 40px;
+  }
+
+  .jokes-title {
+    margin-bottom: 12px;
+    font-size: 26px;
+  }
+
+  .jokes-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .test {
+    padding: 50px 10px;
+    margin-bottom: 20px;
+  }
+
+  .test-title {
+    font-size: 24px;
+  }
+
+  .test-button {
+    margin-top: 26px;
+  }
+
+  footer {
+    padding: 12px 0;
+    font-size: 12px;
+  }
 }

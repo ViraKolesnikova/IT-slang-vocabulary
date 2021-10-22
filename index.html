@@ -37,6 +37,7 @@
           </div>           
         </li>
       </nav>
+      <button type="button" class="hamburger-menu"></button>
     </div>
   </header>
   <main>
@@ -173,8 +174,20 @@
   </main>
   <footer>
     <div class="container" id="contacts">
-      <h3>Контакти розробника сторінки</h3>
-      <p></p>
+      <h3 class="footer-title">Контакти розробника сторінки</h3>
+      <div class="contact">
+        <span class="contact-type">E:</span>
+        <a class="contact-link" href="mailto:biralara@ukr.net">biralara@ukr.net</a>
+      </div>
+      <div class="contact">
+        <span class="contact-type">Github:</span>
+        <a class="contact-link" href="https://github.com/ViraKolesnikova"
+          target="blanc">https://github.com/ViraKolesnikova</a>
+      </div>
+      <div class="contact">
+        <span class="contact-type">Address:</span>
+        <p class="contact-text">Ivano-Frankivsk, Ukraine</p>
+      </div>
     </div>
   </footer>
   <!-- Модальне вікно -->
@@ -183,6 +196,7 @@
       <button class="modal-close-btn" type="button"></button>
       <!-- Тест -->
       <div class="quiz"></div>
+      <div class="result"></div>
       <button type="button" class="next-btn" id="next">Далі</button>
       <button type="submit" class="result-btn" id="submit">Результат</button>
       <div id="results"></div>
