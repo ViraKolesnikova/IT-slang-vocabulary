@@ -16,5 +16,7 @@ export default
   quizRef: document.querySelector('.quiz'),  
   nextBtnRef: document.querySelector('.next-btn'),
   resultBtnRef: document.querySelector('.result-btn'),
-  resultRef: document.querySelector('.result')
+  resultRef: document.querySelector('.result'),
+    burgerBoxRef: document.querySelector('.menu__box'),
+  checkboxRef: document.querySelector('#menu__toggle')
 }

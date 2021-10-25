@@ -6,7 +6,18 @@ import tests from './tests.js';
 // console.log(refs);
 
 
-const { inputRef, searchBtnRef, alphabetListRef, termRef, definitionRef, listRef, searchForm, headerRef, mainRef, themeSwitcherRef, bodyRef } = refs;
+const { inputRef,
+  searchBtnRef,
+  alphabetListRef,
+  termRef,
+  definitionRef,
+  listRef,
+  headerRef,
+  mainRef,
+  themeSwitcherRef,
+  bodyRef,
+  burgerBoxRef,
+checkboxRef} = refs;
 
 // EVENTS
 searchBtnRef.addEventListener('click', onInputSearch);
@@ -14,6 +25,7 @@ inputRef.addEventListener('focus', onInputFocus);
 alphabetListRef.addEventListener('click', onLetterClick);
 listRef.addEventListener('click', onTermLinkClick);
 themeSwitcherRef.addEventListener('change', onThemeSwitcherChange);
+burgerBoxRef.addEventListener('click', onBurgerMenuClick);
 
 changeMainPositionToHeader();
 loadSavedTheme();
@@ -132,4 +144,9 @@ function loadSavedTheme() {
   if (savedTheme) {
     return changeToDarkTheme();
   }
+}
+
+// HAMBURGER MENU
+function onBurgerMenuClick(event) {
+  checkboxRef.checked = false;
 }

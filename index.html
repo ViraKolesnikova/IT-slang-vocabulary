@@ -11,10 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/wrapper.css">
+  <link rel="stylesheet" href="./css/burger-menu.css">
 </head>
 <body>
   <header>
-    <div class="container header-content">
+    <div class="container header-content mobile-container">
       <img src="./images/tree-64x64.png" alt="лого" width="64"> 
       <p class="header-text">Розважально-пізнавальна сторінка<br> для всіх, хто цікавиться світом ІТ</p>     
       <nav class="navigation">
@@ -37,26 +38,40 @@
           </div>           
         </li>
       </nav>
-      <button type="button" class="hamburger-menu"></button>
+     
+      <!-- Гамбургер меню -->
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#alphabet">Алфавітний пошук</a></li>
+          <li><a class="menu__item" href="#jokes">Анекдоти</a></li>
+          <li><a class="menu__item" href="#test">Тест</a></li>
+          <li><a class="menu__item" href="#contacts">Контакти</a></li>          
+        </ul>
+      </div>
+      <!--  -->
     </div>
   </header>
   <main>
+    <section class="hero">
+      <h1 class="main-title">Словник  <span class="main-title-accent">сленгу</span>  програмістів</h1>
+      <form class="search" action="">
+        <input class="search-input" type="text" placeholder="Введіть незнайоме слово!" autocomplete="off">
+        <button class="search-button" type="submit">Знайти</button>
+      </form>
+    </section>
     <div class="container">
-      <section class="hero">
-        <h1 class="main-title">Словник  <span class="main-title-accent">сленгу</span>  програмістів</h1>
-        <form class="search" action="">
-          <input class="search-input" type="text" placeholder="Введіть незнайоме слово!" autocomplete="off">
-          <button class="search-button" type="submit">Знайти</button>
-        </form>
-      </section>
       <div class="alphabet" id="alphabet">
-        <ul class="alphabet-list">
-          <li class="alphabet-item">
-            <button type="button" class="alphabet-btn">А</button>
-          </li>
-          <li class="alphabet-item">
-            <button type="button" class="alphabet-btn">Б</button>
-          </li>
+      <ul class="alphabet-list">
+        <li class="alphabet-item">
+          <button type="button" class="alphabet-btn">А</button>
+        </li>
+        <li class="alphabet-item">
+          <button type="button" class="alphabet-btn">Б</button>
+        </li>
           <li class="alphabet-item">
             <button type="button" class="alphabet-btn">В</button>
           </li>
@@ -165,15 +180,15 @@
          <li class="jokes-item"><img src="./images/8-trembit-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img"></li>
         </ul>
      </div>
-    <div class="test" id="test">
-      <h2 class="test-title"><span class="test-title--accent">тест:</span><br>наскільки добре ти розумієш сленг айтішніків?</h2>
-      <button type="button" class="test-button">Почати тест</button>
-      
-    </div>
+      <div class="test" id="test">
+        <h2 class="test-title"><span class="test-title--accent">тест:</span><br>наскільки добре ти розумієш сленг айтішніків?</h2>
+        <button type="button" class="test-button">Почати тест</button>
+        
+      </div>
     </div>
   </main>
   <footer>
-    <div class="container" id="contacts">
+    <div class="container mobile-container" id="contacts">
       <h3 class="footer-title">Контакти розробника сторінки</h3>
       <div class="contact">
         <span class="contact-type">E:</span>

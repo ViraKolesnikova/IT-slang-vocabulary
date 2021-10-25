@@ -46,21 +46,19 @@ img {
   color: var(--white-color);
 }
 
-.container {
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 425px) {
   .container {
-    width: 480px;
+    min-width: 425px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    min-width: 768px;
+    padding: 0 15px;
   }
 }
 
@@ -69,6 +67,7 @@ img {
     width: 1200px;
   }
 }
+
 /* ============HEADER============= */
 header {
   position: fixed;
@@ -82,17 +81,31 @@ header {
 .header-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-text {
-  margin-left: 12px;
-  line-height: 1.4;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-text {
+    display: block;
+    margin-left: 12px;
+    line-height: 1.4;
+  }
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
 }
 
 .navigation-item:not(:last-child) {
@@ -109,12 +122,28 @@ header {
   color: var(--accent);
   text-decoration-line: underline;
 }
+
+.burger-menu-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/menu_hamburger_burger_icon_176431.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-menu-btn {
+    display: none;
+  }
+}
 /* ============================ */
 
 /* =========HERO =============*/
 .hero {
-  padding: 100px 0px;
-  margin-bottom: 34px;
+  margin-bottom: 16px;
+  padding: 30px 0;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.3),
@@ -125,29 +154,75 @@ header {
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 100px 0px;
+    margin-bottom: 34px;
+  }
+}
+
 .main-title {
-  margin-bottom: 62px;
+  margin-bottom: 30px;
+  font-size: 32px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 42px;
   font-weight: 700;
 }
 
+@media screen and (min-width: 1200px) {
+  .main-title {
+    margin-bottom: 62px;
+    font-size: 42px;
+  }
+}
+
 .main-title-accent {
+  font-size: 52px;
   color: #ffffffbd;
-  font-size: 68px;
   font-style: italic;
 }
 
+@media screen and (min-width: 1200px) {
+  .main-title-accent {
+    font-size: 68px;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 425px) and (max-width: 1199px) {
+  .search {
+    flex-direction: column;
+  }
+}
+
 .search-input {
-  margin-right: 16px;
+  margin-right: auto;
+  margin-bottom: 10px;
   padding: 14px 16px;
-  width: 440px;
+  width: 360px;
   background-color: transparent;
   font-size: 18px;
   line-height: 1.25;
   border: 2px solid var(--header-bg-color);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .search-input {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .search-input {
+    margin-right: 16px;
+    width: 440px;
+  }
 }
 
 .search-input::placeholder {
@@ -157,12 +232,6 @@ header {
 .search-input:focus {
   outline: none;
   border-color: var(--placeholder-color);
-}
-
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .search-button,
@@ -233,10 +302,36 @@ header {
   transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+@media screen and (max-width: 431px) {
+  .alphabet-btn {
+    width: 30px;
+    font-size: 14px;
+    padding: 5px 0px;
+  }
+}
+
 .alphabet-btn:hover,
 .alphabet-btn:active,
 .alphabet-btn:focus {
   box-shadow: inset 0 0 20px #bfe2ff;
+}
+
+.image-container {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .image-container {
+    display: block;
+  }
 }
 
 .explanation {
@@ -251,10 +346,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 44px;
-
+  margin-top: 20px;
   background-color: var(--primery-text-color);
   color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .details {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .details {
+    margin-top: 44px;
+  }
 }
 
 .searched-term {
@@ -285,24 +391,44 @@ header {
 
 /*============JOKES======== */
 .jokes {
-  margin-bottom: 64px;
+  margin-bottom: 40px;
   padding-top: 44px;
   background-image: url(../images/snow-fone-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  .jokes {
+    margin-bottom: 64px;
+  }
+}
+
 .jokes-title {
+  margin-bottom: 12px;
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 26px;
+  font-size: 26px;
+}
+
+@media screen and (min-width: 1200px) {
+  .jokes-title {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
 }
 
 .jokes-text {
   text-align: center;
-  font-size: 22px;
-  font-style: italic;
   margin-bottom: 16px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media screen and (min-width: 1200px) {
+  .jokes-text {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
 }
 
 .jokes-text--accent,
@@ -316,22 +442,37 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
 
-  margin-right: -20px;
-  margin-bottom: -20px;
+@media screen and (min-width: 768px) {
+  .jokes-list {
+    margin-right: -20px;
+    margin-bottom: -20px;
+  }
 }
 
 .jokes-item {
-  margin-right: 20px;
   margin-bottom: 20px;
-  flex-basis: calc(100% - 40px) / 2;
+}
+
+@media screen and (max-width: 849px) {
+  .jokes-item:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .jokes-item {
+    margin-right: 20px;
+    flex-basis: calc(100% - 40px) / 2;
+  }
 }
 
 /* ========================== */
 
 .test {
-  padding: 100px 20px;
-  margin-bottom: 44px;
+  padding: 50px 10px;
+  margin-bottom: 20px;
   border: 2px solid var(--primery-text-color);
   border-radius: 80px;
   background-image: linear-gradient(
@@ -341,17 +482,36 @@ header {
   );
 }
 
+@media screen and (min-width: 768px) {
+  .test {
+    padding: 100px 20px;
+    margin-bottom: 44px;
+  }
+}
+
 .test-button {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 54px;
+  margin-top: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .test-button {
+    margin-top: 54px;
+  }
 }
 
 .test-title {
   text-align: center;
-  font-size: 36px;
+  font-size: 24px;
   animation: changecolor 5s infinite alternate;
+}
+
+@media screen and (min-width: 768px) {
+  .test-title {
+    font-size: 36px;
+  }
 }
 
 @keyframes changecolor {
@@ -504,10 +664,24 @@ header {
 
 footer {
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 12px 0;
+  font-size: 12px;
   border-bottom: solid 1px var(--placeholder-color);
   background-color: var(--header-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-container {
+    padding: 0 10px;
+  }
 }
 
 .contact {
@@ -520,108 +694,4 @@ footer {
 
 .contact-text {
   display: inline-block;
-}
-
-@media screen and (min-width: 768px) {
-  .header-text {
-    display: none;
-  }
-
-  .details {
-    flex-direction: column-reverse;
-  }
-
-  .image-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .header-text {
-    display: none;
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .hamburger-menu {
-    width: 40px;
-    height: 40px;
-    background-image: url(../images/menu_hamburger_burger_icon_176431.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    background-color: transparent;
-  }
-
-  .header-content {
-    justify-content: space-between;
-  }
-
-  .hero {
-    margin-bottom: 16px;
-    padding: 30px 0;
-  }
-
-  .main-title {
-    margin-bottom: 30px;
-    font-size: 32px;
-  }
-
-  .main-title-accent {
-    font-size: 52px;
-  }
-
-  .search {
-    flex-direction: column;
-  }
-
-  .search-input {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 10px;
-    width: 360px;
-  }
-
-  .details {
-    margin-top: 20px;
-  }
-
-  .image-container {
-    display: none;
-  }
-
-  .jokes {
-    margin-bottom: 40px;
-  }
-
-  .jokes-title {
-    margin-bottom: 12px;
-    font-size: 26px;
-  }
-
-  .jokes-text {
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-
-  .test {
-    padding: 50px 10px;
-    margin-bottom: 20px;
-  }
-
-  .test-title {
-    font-size: 24px;
-  }
-
-  .test-button {
-    margin-top: 26px;
-  }
-
-  footer {
-    padding: 12px 0;
-    font-size: 12px;
-  }
 }
