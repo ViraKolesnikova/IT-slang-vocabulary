@@ -29,7 +29,9 @@ testBtnRef.addEventListener('click', (event) => {
   backdropRef.classList.add('is-open');
   showFirstQuestion();
   resultRef.innerHTML = '';
-  
+  if (nextBtnRef.disabled || resultBtnRef.disabled) {
+    enableNextAndResultBtn();    
+  }
 });
 
 modalCloseBtnRef.addEventListener('click', (event) => {
@@ -85,7 +87,7 @@ function onResultBtnClick(event) {
   resultRef.insertAdjacentHTML('afterbegin', resultMarkup);
   event.target.setAttribute('disabled', true)
   event.target.classList.add('disabled');
-  // resultRef.style.display = 'block'
+  
 }
 // ============Допоміжні функції==============
 
@@ -152,6 +154,14 @@ function disableNextBtn(index, array) {
     nextBtnRef.classList.add('disabled');
   }
 }
+
+function enableNextAndResultBtn() {
+  nextBtnRef.removeAttribute('disabled');
+  nextBtnRef.classList.remove('disabled');
+  resultBtnRef.removeAttribute('disabled')
+  resultBtnRef.classList.remove('disabled');
+}
+
 
 
 
