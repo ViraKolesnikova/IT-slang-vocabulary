@@ -37,7 +37,8 @@ function onInputSearch(event) {
   const result = data.find(object => {
     return inputRef.value.toLowerCase().trim() === object.term.toLowerCase();
   })
- result === undefined ? isAbsentDefinition() : getSearchedDefinition(result);
+  result === undefined ? isAbsentDefinition() : getSearchedDefinition(result);
+  scrollToWordDiscription(listRef);
 }
 
 function onInputFocus(event) {
@@ -83,6 +84,7 @@ function onLetterClick(event) {
   const listItems = createSortedByAlphabetListItems(filteredArr);
   
   listRef.insertAdjacentHTML('afterbegin', listItems);
+  scrollToWordDiscription(listRef);
 }
 
 function onTermLinkClick(event) {
@@ -149,4 +151,14 @@ function loadSavedTheme() {
 // HAMBURGER MENU
 function onBurgerMenuClick(event) {
   checkboxRef.checked = false;
+}
+
+// SCROLL
+function scrollToWordDiscription(place) {
+  setTimeout(() => {
+      place.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+      });
+    }, 500);    
 }
