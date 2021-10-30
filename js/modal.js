@@ -64,7 +64,9 @@ function onNextBtnClickNextSlider(event) {
   quizRef.firstChild.classList.remove('current-question');
   slidersQuizRef[currentSliderIndex].classList.add('current-question');
   slidersQuizRef[currentSliderIndex - 1].classList.remove('current-question');
-  disableNextBtn(currentSliderIndex, slidersQuizRef);  
+  if (currentSliderIndex + 1 === slidersQuizRef.length) {
+    disableNextBtn();
+  }
 }
 
 function onInputRadioClick(event) {
@@ -87,6 +89,7 @@ function onResultBtnClick(event) {
   resultRef.insertAdjacentHTML('afterbegin', resultMarkup);
   event.target.setAttribute('disabled', true)
   event.target.classList.add('disabled');
+  disableNextBtn()
   
 }
 // ============Допоміжні функції==============
@@ -148,11 +151,9 @@ function getQuizResult(test) {
   return;
 }
 
-function disableNextBtn(index, array) {
-  if (index+1 === array.length) {
+function disableNextBtn() {
     nextBtnRef.setAttribute('disabled', true);
-    nextBtnRef.classList.add('disabled');
-  }
+    nextBtnRef.classList.add('disabled');  
 }
 
 function enableNextAndResultBtn() {
