@@ -23,6 +23,7 @@ checkboxRef} = refs;
 searchBtnRef.addEventListener('click', onInputSearch);
 inputRef.addEventListener('focus', onInputFocus);
 alphabetListRef.addEventListener('click', onLetterClick);
+alphabetListRef.addEventListener('touchend', onLetterClick);
 listRef.addEventListener('click', onTermLinkClick);
 themeSwitcherRef.addEventListener('change', onThemeSwitcherChange);
 burgerBoxRef.addEventListener('click', onBurgerMenuClick);
