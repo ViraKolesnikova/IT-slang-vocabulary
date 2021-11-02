@@ -22,8 +22,13 @@ checkboxRef} = refs;
 // EVENTS
 searchBtnRef.addEventListener('click', onInputSearch);
 inputRef.addEventListener('focus', onInputFocus);
-alphabetListRef.addEventListener('click', onLetterClick);
-alphabetListRef.addEventListener('touchend', onLetterClick);
+
+if ('ontouchstart' in window) {
+  alphabetListRef.addEventListener('touchend', onLetterClick);
+} else {
+  alphabetListRef.addEventListener('click', onLetterClick);
+}
+
 listRef.addEventListener('click', onTermLinkClick);
 themeSwitcherRef.addEventListener('change', onThemeSwitcherChange);
 burgerBoxRef.addEventListener('click', onBurgerMenuClick);
@@ -73,9 +78,9 @@ function clearInput() {
 function onLetterClick(event) {
   clearInput();
   listRef.replaceChildren();
-  if (event.target.nodeName !== 'BUTTON') {
-    return
-  };
+  // if (event.target.nodeName !== 'BUTTON') {
+  //   return
+  // };
   const filteredArr = [];
   const activeEl = event.target;
   
