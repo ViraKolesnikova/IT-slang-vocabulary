@@ -3,7 +3,6 @@ import tests from './tests.js';
 
 // =======Доступи========
 const {
-  bodyRef,
   testBtnRef,
   backdropRef,
   modalCloseBtnRef,

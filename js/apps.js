@@ -1,6 +1,7 @@
 import data from './data.js';
 import refs from './refs.js';
-import tests from './tests.js';
+// import tests from './tests.js';
+
 // console.log(tests);
 // console.log(data);
 // console.log(refs);
@@ -24,9 +25,7 @@ checkboxRef} = refs;
 searchBtnRef.addEventListener('click', onInputSearch);
 inputRef.addEventListener('focus', onInputFocus);
 
-
 alphabetRef.addEventListener('click', onLetterClick);
-
 
 listRef.addEventListener('click', onTermLinkClick);
 themeSwitcherRef.addEventListener('change', onThemeSwitcherChange);
@@ -77,9 +76,9 @@ function clearInput() {
 function onLetterClick(event) {
   clearInput();
   listRef.replaceChildren();
-  // if (event.target.nodeName !== 'BUTTON') {
-  //   return
-  // };
+  if (event.target.nodeName !== 'BUTTON') {
+    return
+  };
   const filteredArr = [];
   const activeEl = event.target;
   
