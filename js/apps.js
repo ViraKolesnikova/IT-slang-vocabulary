@@ -8,6 +8,7 @@ import tests from './tests.js';
 
 const { inputRef,
   searchBtnRef,
+  alphabetRef,
   alphabetListRef,
   termRef,
   definitionRef,
@@ -23,11 +24,9 @@ checkboxRef} = refs;
 searchBtnRef.addEventListener('click', onInputSearch);
 inputRef.addEventListener('focus', onInputFocus);
 
-if ('ontouchstart' in window) {
-  alphabetListRef.addEventListener('touchend', onLetterClick);
-} else {
-  alphabetListRef.addEventListener('click', onLetterClick);
-}
+
+alphabetRef.addEventListener('click', onLetterClick);
+
 
 listRef.addEventListener('click', onTermLinkClick);
 themeSwitcherRef.addEventListener('change', onThemeSwitcherChange);

@@ -2,7 +2,8 @@ export default
 {
   inputRef: document.querySelector('.search-input'),
   searchBtnRef: document.querySelector('.search-button'),
-  alphabetListRef: document.querySelector('.alphabet-list'),
+    alphabetListRef: document.querySelector('.alphabet-list'),
+  alphabetRef: document.querySelector('#alphabet'),
   termRef: document.querySelector('.searched-term'),
   definitionRef: document.querySelector('.word-definition'),
   listRef: document.querySelector('.word-list'),
