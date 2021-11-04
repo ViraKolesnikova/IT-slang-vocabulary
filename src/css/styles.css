@@ -501,6 +501,11 @@ header {
   flex-wrap: wrap;
 }
 
+.simple-slider .slider-slide {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
   .jokes-list {
     margin-right: -20px;

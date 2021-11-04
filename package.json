@@ -1,0 +1,35 @@
+{
+  "name": "it-slang-vocabulary",
+  "version": "1.0.0",
+  "description": "Словник сленгу веб-розробників",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /IT-slang-vocabulary/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViraKolesnikova/IT-slang-vocabulary.git"
+  },
+  "author": "Vira Kolesnikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViraKolesnikova/IT-slang-vocabulary/issues"
+  },
+  "homepage": "https://ViraKolesnikova.github.io/IT-slang-vocabulary#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "handlebars": "^4.7.7",
+    "lodash.debounce": "^4.0.8",
+    "pnotify": "^5.2.0",
+    "simpleslider-js": "^1.9.0"
+  }
+}

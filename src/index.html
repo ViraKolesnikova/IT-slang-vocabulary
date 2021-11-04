@@ -11,8 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/wrapper.css">
-  <link rel="stylesheet" href="./css/burger-menu.css">
-  
+  <link rel="stylesheet" href="./css/burger-menu.css">  
 </head>
 <body>
   <header>
@@ -172,7 +171,63 @@
      <div class="jokes" id="jokes">
        <h2 class="jokes-title">Жарти</h2>
        <p class="jokes-text">Якщо ти посміхаєшся, переглядаючи ці картинки - ти точно <span class="jokes-text--accent">програміст</span> або пов’язаний зі сферою ІТ!</p>
-       <ul class="jokes-list">
+        <div class="simple-slider simple-slider-first">
+          <div class="slider-wrapper">
+            <!-- First slide -->
+            <div class="slider-slide">
+              <picture>
+                <source srcset="./images/programist-adresa-mobile.jpg" media="(max-width: 410px)" width="290">
+                <source srcset="./images/programist-adresa-min.jpg" media="(min-width: 411px)" width="400">
+                <img src="./images/programist-adresa-mobile.jpg" alt="жарт про програмістів" width="290" class="jokes-img">
+              </picture>
+            </div>
+            <!-- Second slide -->
+            <div class="slider-slide">
+              <picture>
+                <source srcset="./images/avto-ctrl-z-mobile.jpg" media="(max-width: 410px)" width="290">
+                <source srcset="./images/avto-ctrl-z-min.jpg" media="(min-width: 411px)" width="400">
+                <img src="./images/avto-ctrl-z-mobile.jpg" alt="жарт про програмістів" width="290" class="jokes-img">
+              </picture>
+            </div>
+            <!-- Third slide -->
+            <div class="slider-slide">
+              <picture>
+                <source srcset="./images/programist-kofejin-kod-mobile.jpg" media="(max-width: 410px)" width="290">
+                <source srcset="./images/programist-kofejin-kod-min.jpg" media="(min-width: 411px)" width="400">
+                <img src="./images/programist-kofejin-kod-mobile.jpg" alt="жарт про програмістів" width="290" class="jokes-img">
+              </picture>
+            </div>
+            <!-- Fourth slide -->
+            <div class="slider-slide">
+              <picture>
+                <source srcset="./images/zlamaty-parol-1234-mobile.jpg" media="(max-width: 410px)" width="290">
+                <source srcset="./images/zlamaty-parol-1234-min.jpg" media="(min-width: 411px)" width="400">
+                <img src="./images/zlamaty-parol-1234-mobile.jpg" alt="жарт про програмістів" width="290" class="jokes-img">
+              </picture>
+            </div>
+            <!-- Fifth slide -->
+            <div class="slider-slide">
+              <picture>
+                <source srcset="./images/reabilitatsija-programistiv-mobile.jpg" media="(max-width: 410px)" width="290">
+                <source srcset="./images/reabilitatsija-programistiv-min.jpg" media="(min-width: 411px)" width="400">
+                <img src="./images/reabilitatsija-programistiv-mobile.jpg" alt="жарт про програмістів" width="290" class="jokes-img">
+              </picture>
+            </div>
+            <!-- Sixth slide -->
+            <div class="slider-slide">
+              <picture>
+                <source srcset="./images/8-trembit-mobile.jpg" media="(max-width: 410px)" width="290">
+                <source srcset="./images/8-trembit-min.jpg" media="(min-width: 411px)" width="400">
+                <img src="./images/8-trembit-mobile.jpg" alt="жарт про програмістів" width="290" class="jokes-img">
+              </picture>
+            </div>
+            <div class="slider-pagination"></div>
+            <div class="slider-btn slider-btn-prev"></div>
+            <div class="slider-btn slider-btn-next"></div>
+          </div>
+        </div>
+
+       <!-- <ul class="jokes-list">
          <li class="jokes-item">
            <picture>
              <source srcset="./images/programist-adresa-mobile.jpg" media="(max-width: 410px)" width="290">
@@ -183,45 +238,44 @@
          <li class="jokes-item">
            <picture>
              <source srcset="./images/avto-ctrl-z-mobile.jpg" media="(max-width: 410px)" width="290">
-             <source srcset="./images/avto-ctrl-z-min.jpg" media="(min-width: 425px)">
-             <img src="./images/avto-ctrl-z-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img">
+             <source srcset="./images/avto-ctrl-z-min.jpg" media="(min-width: 411px)" width="400">
+             <img src="./images/avto-ctrl-z-mobile.jpg" alt="жарт про програмістів"  width="290" class="jokes-img">
            </picture>
           </li>
          <li class="jokes-item">
            <picture>
              <source srcset="./images/programist-kofejin-kod-mobile.jpg" media="(max-width: 410px)" width="290">
-             <source srcset="./images/programist-kofejin-kod-min.jpg" media="(min-width: 425px)">
-             <img src="./images/programist-kofejin-kod-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img">
+             <source srcset="./images/programist-kofejin-kod-min.jpg" media="(min-width: 411px)" width="400">
+             <img src="./images/programist-kofejin-kod-mobile.jpg" alt="жарт про програмістів"  width="290" class="jokes-img">
            </picture>
           </li>
          <li class="jokes-item">
            <picture>
              <source srcset="./images/zlamaty-parol-1234-mobile.jpg" media="(max-width: 410px)" width="290">
-             <source srcset="./images/zlamaty-parol-1234-min.jpg" media="(min-width: 425px)">
-             <img src="./images/zlamaty-parol-1234-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img">
+             <source srcset="./images/zlamaty-parol-1234-min.jpg" media="(min-width: 411px)" width="400">
+             <img src="./images/zlamaty-parol-1234-mobile.jpg" alt="жарт про програмістів"  width="290" class="jokes-img">
            </picture>
           </li>
          <li class="jokes-item">
            <picture>
              <source srcset="./images/reabilitatsija-programistiv-mobile.jpg" media="(max-width: 410px)" width="290">
-             <source srcset="./images/reabilitatsija-programistiv-min.jpg" media="(min-width: 425px)">
-             <img src="./images/reabilitatsija-programistiv-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img">
+             <source srcset="./images/reabilitatsija-programistiv-min.jpg" media="(min-width: 411px)" width="400">
+             <img src="./images/reabilitatsija-programistiv-mobile.jpg" alt="жарт про програмістів"  width="290" class="jokes-img">
            </picture>
           </li>
          <li class="jokes-item">
            <picture>
              <source srcset="./images/8-trembit-mobile.jpg" media="(max-width: 410px)" width="290">
-             <source srcset="./images/8-trembit-min.jpg" media="(min-width: 425px)">
-             <img src="./images/8-trembit-min.jpg" alt="жарт про програмістів" width="400" height="400" class="jokes-img">
+             <source srcset="./images/8-trembit-min.jpg" media="(min-width: 411px)" width="400">
+             <img src="./images/8-trembit-mobile.jpg" alt="жарт про програмістів"  width="290" class="jokes-img">
            </picture>
           </li>
-        </ul>
-     </div>
+        </ul> -->
+      </div>
       <div class="test" id="test">
         <h2 class="test-title"><span class="test-title--accent">тест:</span><br>наскільки добре ти розумієш сленг айтішніків?</h2>
         <button type="button" class="test-button">Почати тест</button>
         
-      </div>
     </div>
   </main>
   <footer>

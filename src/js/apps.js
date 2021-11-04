@@ -1,6 +1,16 @@
 import data from './data.js';
 import refs from './refs.js';
 // import tests from './tests.js';
+import SimpleSlider from 'simpleslider-js';
+import 'simpleslider-js/dist/simpleslider.min.css';
+
+new SimpleSlider('.simple-slider-first', {
+  speed: 600,
+  autoplay: true,
+  slidesPerView: {
+      840: 2, // 2 slides for viewport >= 768px      
+    }
+});
 
 // console.log(tests);
 // console.log(data);
