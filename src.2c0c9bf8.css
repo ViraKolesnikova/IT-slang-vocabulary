@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*!
+ * SimpleSlider v1.9.0
+ * Simple responsive slider created in pure javascript.
+ * https://github.com/michu2k/SimpleSlider
+ * 
+ * Copyright 2017-2019 Michał Strumpf
+ * Published under MIT License
+ */.simple-slider{overflow:hidden;position:relative}.simple-slider .slider-wrapper{height:100%;position:relative;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-transition-timing-function:cubic-bezier(.7,0,.3,1);transition-timing-function:cubic-bezier(.7,0,.3,1)}.simple-slider .slider-slide{background-size:cover;background-position:top;height:100%;float:left}.simple-slider .slider-pagination{text-align:center;width:100%;bottom:0;position:absolute}.simple-slider .slider-pagination .pagination-bullet{display:inline-block;cursor:pointer;width:16px;height:5px;margin:4px;background-color:#fff;-webkit-transition:all .3s ease;transition:all .3s ease}.simple-slider .slider-pagination .pagination-bullet.is-active{background-color:#999}.simple-slider .slider-btn{width:30px;height:50px;top:50%;cursor:pointer;background-repeat:no-repeat;position:absolute;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.simple-slider .slider-btn.slider-btn-prev{left:20px;background-image:url(/IT-slang-vocabulary/prev.b9f3b98a.svg);background-position:0}.simple-slider .slider-btn.slider-btn-next{right:20px;background-image:url(/IT-slang-vocabulary/next.bc4d5af6.svg);background-position:100%}
+
+/*# sourceMappingURL=/IT-slang-vocabulary/src.2c0c9bf8.css.map */
