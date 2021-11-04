@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/ViraKolesnikova/IT-slang-vocabulary/issues"
   },
-  "homepage": "https://ViraKolesnikova.github.io/IT-slang-vocabulary#readme",
+  "homepage": "https://ViraKolesnikova.github.io/IT-slang-vocabulary",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
